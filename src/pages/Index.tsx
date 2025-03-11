@@ -10,6 +10,11 @@ import Footer from "@/components/Footer";
 
 const Index = () => {
   useEffect(() => {
+    // Add mobile status bar color for Capacitor
+    if (window.Capacitor) {
+      document.documentElement.classList.add('capacitor-app');
+    }
+    
     // Initialize intersection observer for reveal animations
     const observer = new IntersectionObserver(
       (entries) => {

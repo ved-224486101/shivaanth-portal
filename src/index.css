@@ -79,6 +79,15 @@
   body {
     @apply bg-foundation-light text-foundation-dark antialiased;
     font-feature-settings: "rlig" 1, "calt" 1;
+    overscroll-behavior: none;
+  }
+  
+  /* Styles for Capacitor native app */
+  .capacitor-app {
+    /* Prevent overscroll bounce effect on mobile */
+    overscroll-behavior: none;
+    /* Adjust app for mobile safe areas */
+    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
   }
 }
 
@@ -127,3 +136,4 @@
     @apply transition-transform duration-500 hover:scale-105;
   }
 }
+
